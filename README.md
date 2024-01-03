@@ -9,7 +9,8 @@
 - `all.md`: 项目的Markdown版本。
 - `all.pdf`: 项目的PDF版本。
 - `all_files/`: 用于`all.md`文件中图片的显示。
-- `Preprocessed data/`: 存储不同方法下用于交叉验证训练模型的数据。可用以下链接获取：
+
+数据可用以下链接获取：
     * Parquet文件：https://www.dropbox.com/scl/fi/4lsfy4b7xypisc2pslbrt/BondInputs.parquet?rlkey=x9505czcxxvsujvc0iqa44225&dl=0
     
     * xlsx文件： https://www.dropbox.com/scl/fi/wd6wxudkcxeopgqv37sdq/BondInputs.xlsx?rlkey=sh89572uy6lv2000fhv4xid77&dl=0
