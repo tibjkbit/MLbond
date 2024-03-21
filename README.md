@@ -13,7 +13,7 @@
 
 ## 最近更新
 
-- 日期：2024年1月12日
+- 日期：2024年3月21日
 - 维护人员：Liu Jingkang & Yu Shukun
 
 ## 安装指南
@@ -27,6 +27,44 @@ pip install -r requirements.txt
 ## 使用说明
 
 要运行项目，请打开 `all.ipynb` 文件并按顺序执行单元格。您可以在Jupyter Notebook或JupyterLab环境中运行它。
+
+## 神经网络
+
+神经网络算法的相关代码在nn.py文件中，通过调整全局变量和超参数以实现不同的网络架构。
+
+### 函数说明
+
+### `process_data(filename, start_date=None, end_date=None)`
+
+读取并预处理给定的CSV数据文件。可以选择性地根据起止日期过滤数据。返回处理后的Y、X、F、M矩阵和时间索引。
+
+### `R2OOS(y_true, y_forecast)`
+
+计算并返回样本外R2分数，评估预测性能。
+
+### `Model_one` 和 `Model_two` 类
+
+`Model_one` 和 `Model_two` 是PyTorch神经网络模型，用于处理不同的输入数据。这些模型使用ReLU激活函数、批量归一化和dropout层来防止过拟合。
+
+### `IntegratedModel` 类
+
+`IntegratedModel` 结合了 `Model_one` 和多个 `Model_two` 实例的输出，通过一个最终的线性层产生预测。
+
+### `hyperparameter_search(...)`
+
+执行超参数搜索，找到最佳的dropout率和L2正则化权重。返回最佳参数组合。
+
+### `ensure_dir(directory)`
+
+确保指定的目录存在，如果不存在，则创建它。
+
+### `save_model_config(model, file_path)`
+
+将模型配置保存到文件。
+
+### `main(...)`
+
+主函数，负责整个数据处理、模型训练和评估流程。
 
 ## 贡献
 
